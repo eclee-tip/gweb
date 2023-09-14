@@ -14,14 +14,14 @@ body {
 /* Style the heading */
 h1 {
     font-size: 28px;
-    margin: 20px 0;
+    margin: 10px 0;
 }
 
 /* Style the buttons */
 button {
     font-size: 18px;
     padding: 10px 20px;
-    margin: 10px;
+    margin: 1px;
     background-color: #3498db;
     border: none;
     color: #fff;

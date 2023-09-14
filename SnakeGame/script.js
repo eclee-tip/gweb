@@ -5,7 +5,7 @@ const controls = document.querySelectorAll(".controls i");
 
 let gameOver = false;
 let foodX, foodY;
-let snakeX = 5, snakeY = 5;
+let snakeX = 10, snakeY = 10;
 let velocityX = 0, velocityY = 0;
 let snakeBody = [];
 let setIntervalId;
@@ -24,7 +24,7 @@ const updateFoodPosition = () => {
 const handleGameOver = () => {
     // Clearing the timer and reloading the page on game over
     clearInterval(setIntervalId);
-    alert("Game Over! Press OK to replay...");
+    alert("Don't give up you can do it! 😊");
     location.reload();
 }
 
@@ -89,5 +89,5 @@ const initGame = () => {
 }
 
 updateFoodPosition();
-setIntervalId = setInterval(initGame, 100);
+setIntervalId = setInterval(initGame, 400);
 document.addEventListener("keyup", changeDirection);
