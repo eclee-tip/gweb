@@ -154,7 +154,36 @@ function right() {
 		thingie.style.left = thingie.offsetLeft + step + "px";
 	}
 	updateEmo(true);
+	if (thingie.offsetTop === home.offsetTop && thingie.offsetLeft === home.offsetLeft) {
+		showNotification();
+	}
 }
+
+function showNotification() {
+	const notification = document.getElementById("notification");
+	notification.style.display = "block";
+  
+	// Create the button element with the "black-button" class.
+	const button = document.createElement("button");
+	button.type = "button";
+	button.className = "gray-button"; // Apply the CSS class
+	button.textContent = "Play Again";
+	button.onclick = resetGame; // Set the click event handler
+  
+	// Append the button to the notification.
+	notification.appendChild(button);
+  }  
+
+// Optionally, you can define a resetGame function to reset the game when the "Play Again" button is clicked.
+function resetGame() {
+  const notification = document.getElementById("notification");
+  notification.style.display = "none";
+
+  // Reset the game logic and positions as needed.
+  // For example, you can reload the page or reset the player's position.
+  location.reload(); // This reloads the page to start a new game.
+}
+
 
 //check if one can move horizontally
 function checkXboundry(dir) {
