@@ -1,6 +1,7 @@
 const mazeButton = document.getElementById("mazeButton");
 const snakeButton = document.getElementById("snakeButton");
 const rpsButton = document.getElementById("rpsButton");
+const gnButton = document.getElementById("gnButton");
 const gameContainer = document.getElementById("gameContainer");
 
 rpsButton.addEventListener("click", () => {
@@ -17,3 +18,8 @@ snakeButton.addEventListener("click", () => {
     // Load the snake game here
     gameContainer.innerHTML = '<iframe src="/SnakeGame/snake_game.html" width="800" height="600"></iframe>';
 });
+
+gnButton.addEventListener("click", () => {
+    // Load the guess the number game here
+    gameContainer.innerHTML = '<iframe src="/GuessNumGame/guessnum_game.html" width="800" height="600"></iframe>'
+})
